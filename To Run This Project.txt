@@ -1,0 +1,81 @@
+Here’s a clear, step‑by‑step guide to run the project and use the built‑in chat.
+
+**Prerequisites**
+- Windows with Python installed (accessed via the py launcher)
+- Internet access to install dependencies
+
+**Setup**
+- Open a terminal in the project directory:
+  - d:\Projects\Privacy-Safe Cross-Company Data Insights
+- Install dependencies:
+
+```powershell
+py -m pip install -r requirements.txt
+```
+
+**Start the Dashboard**
+- Launch the Streamlit server:
+
+```powershell
+py -m streamlit run src/app.py --server.headless true
+```
+
+- Open the app:
+  - Local URL: http://localhost:8501
+
+**Use the Dashboard**
+- Privacy Controls:
+  - Use the sidebar slider “Privacy Budget (Epsilon)” to tune differential privacy.
+  - Lower epsilon = more noise, higher privacy; higher epsilon = less noise, higher accuracy.
+
+- Tabs:
+  - Fraud Detection:
+    - Click “Run Secure Fraud Analysis”
+    - View metrics for Bank Risky, Insurer Risky, and Overlapping Fraudsters (noisy count)
+  - Financial Inclusion (Credit Invisible):
+    - Click “Run Financial Inclusion Analysis”
+    - View metrics for Bank ‘Invisible’, Insurer Good Payers, and Potential Candidates (noisy count)
+
+**Chat Interface**
+- After running an analysis on either tab, use the section “Cortex AI Analyst”.
+- Example questions:
+  - “How many overlapping fraudsters did we find?”
+  - “How many credit invisible customers can we help?”
+  - “What is the risk correlation?”
+- Notes:
+  - The chat is simulated and answers based on the latest analysis results shown on screen.
+
+**Run Tests**
+- Unit tests to validate fraud and inclusion logic:
+
+```powershell
+py -m pytest
+```
+
+- Smoke test to confirm the server is reachable:
+
+```powershell
+py tests/smoke_test.py
+```
+
+**Troubleshooting**
+- ImportError for modules (e.g., compute_inclusion_overlap):
+  - Ensure the server is restarted after code changes:
+
+```powershell
+# Stop the running Streamlit process then start again
+py -m streamlit run src/app.py --server.headless true
+```
+
+  - If you still see module import issues in some terminals, set PYTHONPATH for the session:
+
+```powershell
+$env:PYTHONPATH = "D:\Projects\Privacy-Safe Cross-Company Data Insights"
+py -m streamlit run src/app.py --server.headless true
+```
+
+- Data missing or outdated:
+  - The app auto‑regenerates synthetic data if required (new columns like Credit_History_Months).
+  - You can also regenerate manually by deleting the CSVs and restarting the app.
+
+

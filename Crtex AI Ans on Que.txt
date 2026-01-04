@@ -1,0 +1,37 @@
+Good questions to try
+
+- Fraud
+  
+  - How many overlapping fraudsters did we find?
+  - What is the risk correlation across datasets?
+  - How does the overlap change if I set epsilon to 0.5 vs 2.0?
+
+- Financial Inclusion
+  
+  - How many credit invisible customers can we help?
+  - Which credit history bands contribute most to inclusion candidates?
+  - What policy could increase inclusion in the top segment?
+
+- Trading Risk
+  
+  - How many overlapping risky traders did we find?
+  - Is there a relationship between trading frequency and portfolio value among overlaps?
+  - Which thresholds make the overlap most significant?
+
+- Overlaps and counts
+- “How much overlap do we have?” or “Total overlapping entities”
+- “Bank risky count” or “Insurer good payers count”
+
+- Percentages and shares
+- “What is the overlap share?” or “Overlap ratio”
+
+- Accuracy and differences
+- “What is the difference between private and true?”
+- “How accurate are these numbers?”
+
+- Privacy and identities
+- “List the customer IDs” → returns a privacy-safe explanation
+
+- Comparisons and guidance
+- “Compare bank vs insurer” or “bank vs brokerage”
+- “How to download Excel” or “Power BI export”

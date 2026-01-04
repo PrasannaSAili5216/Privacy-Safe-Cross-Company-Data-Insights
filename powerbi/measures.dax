@@ -1,0 +1,6 @@
+Overlapping Fraudsters = SUM(FraudSummary[Private Overlap])
+Potential Candidates = SUM(InclusionSummary[Private Overlap])
+Overlapping Traders = SUM(TradingSummary[Private Overlap])
+Total Bank Risky = SUM(FraudSummary[Bank Risky Count])
+Total Insurer Risky = SUM(FraudSummary[Insurer Risky Count])
+Total Brokerage Risky = SUM(TradingSummary[Brokerage Risky Count])
