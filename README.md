@@ -1,3 +1,10 @@
+|Home Page|
+<img width="1918" height="860" alt="Home " src="https://github.com/user-attachments/assets/a93e5343-23e0-4c4d-9d7c-32f929bc6bc5" />
+
+|Deploy Page|
+<img width="1918" height="865" alt="deploy page" src="https://github.com/user-attachments/assets/4c5cb817-3890-4fc9-9448-90a446464292" />
+
+
 # 🔒 Privacy-Safe Cross-Company Data Insights
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
